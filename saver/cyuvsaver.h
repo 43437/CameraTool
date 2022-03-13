@@ -12,7 +12,7 @@ extern "C"{
 #ifdef __cplusplus
 };
 #endif
-#include "ccamera.h"
+#include "camera/ccamera.h"
 
 class CYUVSaver
 {

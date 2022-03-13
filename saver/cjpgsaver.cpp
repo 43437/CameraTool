@@ -1,6 +1,6 @@
 #include "cjpgsaver.h"
 #include <iostream>
-#include "coutputencoder.h"
+#include "cencodhelper.h"
 
 CJPGSaver::CJPGSaver(CCamera& camera) : m_rCamera(camera)
                                         ,m_pFormatCtx(nullptr)
@@ -53,7 +53,7 @@ void CJPGSaver::Save()
     //Scale end
 
     //Encode begin
-    COutputEncoder outEncoder(m_pAVCodecCtx);
+    CEncodeHelper outEncoder(m_pAVCodecCtx);
 
 
     AVPacket *pSavePacket = av_packet_alloc();

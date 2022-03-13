@@ -1,6 +1,6 @@
 #include "cvideosaver.h"
 #include <iostream>
-#include "coutputencoder.h"
+#include "cencodhelper.h"
 #include <unistd.h>
 
 CVideoSaver::CVideoSaver(CCamera& camera) : m_rCamera(camera)

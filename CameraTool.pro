@@ -13,15 +13,18 @@ LIBS += -L/home/joseph/tools/ffmpeg_build/lib/ -lavcodec \
         -lswscale
 
 LIBS += -lSDL2
+LIBS += -lpthread
 
 SOURCES += \
+        camera/ccamerayuv.cpp \
         camerasock/ccamerasockclient.cpp \
         camerasock/ccamerasockserver.cpp \
         camerasock/ccamerasocktest.cpp \
         camerasock/cdatapool.cpp \
-        ccamera.cpp \
+        camera/ccamera.cpp \
+        cdecodehelper.cpp \
+        cencodhelper.cpp \
         clogutil.cpp \
-        coutputencoder.cpp \        
         main.cpp \
         saver/cvideosaver.cpp \
         saver/cyuvsaver.cpp \
@@ -30,13 +33,15 @@ SOURCES += \
         sdlplayer/csdlplayer.cpp
 
 HEADERS += \
+    camera/ccamerayuv.h \
     camerasock/ccamerasockclient.h \
     camerasock/ccamerasockserver.h \
     camerasock/ccamerasocktest.h \
     camerasock/cdatapool.h \
-    ccamera.h \
+    camera/ccamera.h \
+    cdecodehelper.h \
+    cencodhelper.h \
     clogutil.h \
-    coutputencoder.h \
     saver/cvideosaver.h \
     saver/cyuvsaver.h \
     saver/cjpgsaver.h \

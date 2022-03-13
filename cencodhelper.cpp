@@ -1,12 +1,12 @@
-#include "coutputencoder.h"
+#include "cencodhelper.h"
 #include <iostream>
 
-COutputEncoder::COutputEncoder(AVCodecContext *pAVCodecCtx) : m_pAVCodecCtx(pAVCodecCtx)
+CEncodeHelper::CEncodeHelper(AVCodecContext *pAVCodecCtx) : m_pAVCodecCtx(pAVCodecCtx)
 {
     Init();
 }
 
-bool COutputEncoder::Encode(AVFrame* pFrame, AVPacket* pAVPacket)
+bool CEncodeHelper::Encode(AVFrame* pFrame, AVPacket* pAVPacket)
 {
     bool bRet = false;
 
@@ -36,7 +36,7 @@ bool COutputEncoder::Encode(AVFrame* pFrame, AVPacket* pAVPacket)
     return bRet;
 }
 
-void COutputEncoder::Init()
+void CEncodeHelper::Init()
 {
 
 }

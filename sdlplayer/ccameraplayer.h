@@ -2,7 +2,7 @@
 #define CCAMERAPLAYER_H
 
 #include "csdlplayer.h"
-#include "ccamera.h"
+#include "camera/ccamera.h"
 
 class CCameraPlayer : public CSDLPlayer
 {

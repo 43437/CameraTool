@@ -1,5 +1,5 @@
-#ifndef COUTPUTENCODER_H
-#define COUTPUTENCODER_H
+#ifndef CEncodeHelper_H
+#define CEncodeHelper_H
 
 #ifdef __cplusplus
 extern "C"{
@@ -13,10 +13,10 @@ extern "C"{
 };
 #endif
 
-class COutputEncoder
+class CEncodeHelper
 {
 public:
-    COutputEncoder(AVCodecContext *pAVCodecCtx);
+    CEncodeHelper(AVCodecContext *pAVCodecCtx);
     bool Encode(AVFrame* pFrame, AVPacket* pAVPacket);
 
 private:
@@ -26,4 +26,4 @@ private:
     AVCodecContext          *m_pAVCodecCtx;
 };
 
-#endif // COUTPUTENCODER_H
+#endif // CEncodeHelper_H
