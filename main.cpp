@@ -1,9 +1,10 @@
 #include <iostream>
 #include "ccamera.h"
-#include "cyuvsaver.h"
-#include "cjpgsaver.h"
-#include "cvideosaver.h"
-#include "ccameraplayer.h"
+#include "saver/cyuvsaver.h"
+#include "saver/cjpgsaver.h"
+#include "saver/cvideosaver.h"
+#include "sdlplayer/ccameraplayer.h"
+#include "camerasock/ccamerasocktest.h"
 
 using namespace std;
 
@@ -16,11 +17,14 @@ int main()
 //    CJPGSaver jpgSaver(camera);
 //    jpgSaver.Save();
 
-//    CVideoSaver videoSaver(camera);
-//    videoSaver.Save();
+    CVideoSaver videoSaver(camera);
+    videoSaver.Save();
 
-    CCameraPlayer cameraPlayer(camera);
-    cameraPlayer.Play();
+//    CCameraPlayer cameraPlayer(camera);
+//    cameraPlayer.Play();
+
+//    CCameraSockTest cameraSock(camera);
+//    cameraSock.Start();
 
     cout << "Hello World!" << endl;
     return 0;
