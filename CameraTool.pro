@@ -22,6 +22,9 @@ SOURCES += \
         camerasock/ccamerasocktest.cpp \
         camerasock/cdatapool.cpp \
         camera/ccamera.cpp \
+        camerastream/ccamerastreamclient.cpp \
+        camerastream/ccamerastreamserver.cpp \
+        camerastream/ccamerastreamtest.cpp \
         cdecodehelper.cpp \
         cencodhelper.cpp \
         clogutil.cpp \
@@ -39,6 +42,9 @@ HEADERS += \
     camerasock/ccamerasocktest.h \
     camerasock/cdatapool.h \
     camera/ccamera.h \
+    camerastream/ccamerastreamclient.h \
+    camerastream/ccamerastreamserver.h \
+    camerastream/ccamerastreamtest.h \
     cdecodehelper.h \
     cencodhelper.h \
     clogutil.h \

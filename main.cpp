@@ -5,6 +5,7 @@
 #include "saver/cvideosaver.h"
 #include "sdlplayer/ccameraplayer.h"
 #include "camerasock/ccamerasocktest.h"
+#include "camerastream/ccamerastreamtest.h"
 
 using namespace std;
 

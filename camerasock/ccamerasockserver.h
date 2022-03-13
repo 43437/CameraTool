@@ -28,6 +28,7 @@ private:
 
 private:
     void InitCodec();
+    void InitDataBuf();
     void Init();
     void Server();
     void Publish(AVPacket& stuOutPkt);

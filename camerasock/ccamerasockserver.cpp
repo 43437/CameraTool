@@ -46,7 +46,7 @@ void CCameraSockServer::InitCodec()
     }
 }
 
-void CCameraSockServer::Init()
+void CCameraSockServer::InitDataBuf()
 {
     int iDataSize = m_objCameraYUV.GetDataSize();
     m_pFrame = av_frame_alloc();
@@ -55,6 +55,11 @@ void CCameraSockServer::Init()
     m_pFrame->format = (AVPixelFormat)ePixFmt;
     m_pFrameBuff = (uint8_t *)av_malloc(iDataSize);
     av_image_fill_arrays(m_pFrame->data, m_pFrame->linesize, m_pFrameBuff, (AVPixelFormat)ePixFmt, eVideoSizeW, eVideoSizeH, 16);
+}
+
+void CCameraSockServer::Init()
+{
+    InitDataBuf();
 
     InitCodec();
 }
